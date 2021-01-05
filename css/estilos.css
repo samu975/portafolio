@@ -69,7 +69,7 @@ color: #FF2800;
 .imagen{
     grid-column: 2/3;
     grid-row: 1/7;
-    background-image: url(../assets/IMG_2154.jpg);
+    background-image: url(../assets/IMG_2154-min.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

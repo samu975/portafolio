@@ -1,29 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 .principal{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, 120px);
+    grid-template-rows: repeat(6, 6fr);
     height: 100vh;
     width: 100vw;
     background-color: black;
     align-content: center;
 }
 .titulo{
-    font-size: 80px;
+    font-size: 6rem;
     cursor: pointer;
-    width: 260px;
+    width: 3em;
     margin: 0;
     margin-top: 15px;
     text-align: left;
-    font-family: 'Roboto', sans-serif;
-
 }
 
 .primero{
@@ -65,7 +66,24 @@ color: #FF2800;
 .samuel:hover::after{
     content: "Contacto";
 }
+.tap-indication{
+    display: none;
+}
 
+.about{
+	color: #ffffff;
+}
+
+.proyect{
+ color: #FF2800;
+}
+
+.contact{
+	color: #FF2800;
+}
+
+
+/*------------------- imagenes y animaciones  -------------*/
 .imagen{
     grid-column: 2/3;
     grid-row: 1/7;
@@ -137,14 +155,63 @@ color: #FF2800;
 
 
 
+/*--------------------------------- media --------------*/
+@media screen and (min-width: 768px) {
+	.hide-element-mobile {
+		display: none;
+	}
+}
 
-		@media screen and (max-width: 767px) {
-			.on-hover-40:hover {
-				margin-left: 0px;	
-			}
-			.on-hover--40:hover {
-				margin-left: 0px;
-			}	
-        } 
+
+@media screen and (max-width: 769px) {
+    
+
+	.tap-indication {
+        display: block;
+	    text-align: center;
+		width: 100%;
+		font-family:"Medium";
+		color: #ffffff;
+		position: fixed;
+		bottom: 4%;
+		font-size: 0.6em; /* general fallback */
+	    font-size: 3.6vm; /* IE9 fallback */
+	    font-size: 3.6vmin;
+		animation: bounce 1s infinite alternate;
+		
+		-webkit-animation:bounce .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+		-moz-animation:bounce .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+		animation:bounce .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;	
+	}
+	@keyframes bounce {
+	  from {
+	    transform: translateY(0px);
+	  }
+	  to {
+	    transform: translateY(-8px);
+	  }
+	}
+	@-webkit-keyframes bounce {
+	  from {
+	    transform: translateY(0px);
+	  }
+	  to {
+	    transform: translateY(-8px);
+	  }
+	}
+
+    .principal{
+        box-sizing: border-box;
+    }
+    .titulo{
+        font-size: 1.6rem;
+        margin-top: 15px;
+        text-align: left;
+    }
+    
+
+    
+}
+
 
 

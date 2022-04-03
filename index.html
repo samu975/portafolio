@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilos.css">
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <link rel="shortcut icon" href="./assets/mio-logo_sin-fondo-peque.png" type="">
     <title>Samuel</title>
 </head>
 <body>
     
-    <script src="./script/index.js"></script>
-    <section class="principal mobile-tap-area">
+    <section class="principal tap-area">
         <!-- Aparecen primero -->
         <div class="primero seccion-titulo animate toggle-mobile-first">
-            <h1 class="hola titulo"></h1>
+            <h1 class="hola titulo" onclick="location.href ='aboutpage.html';"> </a></h1>
         </div>
         <div class="segundo seccion-titulo animate delay04 toggle-mobile-first">
             <h1 class="soy titulo"></h1>
@@ -26,24 +24,26 @@
         </div>
         <div class="tap-indication">Toca cualquier lugar de la pantalla</div>
         <!-- Aparecen Luego -->
-         <div class="primero toggle-mobile-second hide-element-mobile">
+         <div class="primero toggle-mobile-second hide-element-mobile animate">
             <h1 class="titulo-oculto titulo about">About</h1>
         </div>
-        <div class="segundo toggle-mobile-second hide-element-mobile">
+        <div class="segundo toggle-mobile-second hide-element-mobile animate delay04">
             <h1 class="titulo-oculto titulo proyect">Proyectos</h1>
         </div>
-        <div class="tercero toggle-mobile-second hide-element-mobile">
+        <div class="tercero toggle-mobile-second hide-element-mobile animate delay08">
             <h1 class="titulo-oculto titulo contact">Contact</h1>
         </div> 
 
     </section>
+
+    <!-------------------- jquery scripts --------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-			    $(".mobile-tap-area").click(function(){
+                $(".hide-element-mobile").css({"display":"none"})
+			    $(".tap-area").click(function(){
 			        $(".toggle-mobile-first").toggle();
-			        $(".toggle-mobile-second").toggle();
-			                            
+                    $(".toggle-mobile-second").toggle();               
 			    });
 			});
 		</script>
